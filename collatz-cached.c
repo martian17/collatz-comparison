@@ -18,9 +18,8 @@ uint collatz(uint n0, uint* cache){
     return cnt;
 }
 
-int main(){
-    uint limit = 10000000;
-    //uint limit = 10;
+int main(int argc, char** argv){
+    uint limit = atoi(argv[1]);
     uint* result = malloc(limit*sizeof(uint));
     for(uint i = 2; i < limit; i++){
         result[i] = collatz(i,result);
